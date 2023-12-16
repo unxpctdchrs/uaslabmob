@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "724849710681",
-    "project_id": "ourlist-9c9db",
-    "storage_bucket": "ourlist-9c9db.appspot.com"
+    "project_number": "856049938522",
+    "project_id": "ourlist-860be",
+    "storage_bucket": "ourlist-860be.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:724849710681:android:c9f8089cdfa5b67d820348",
+        "mobilesdk_app_id": "1:856049938522:android:ce8d20fb421702fab0e863",
         "android_client_info": {
           "package_name": "com.asparagus.ourlist"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyDgKCRQOe69cEb27eczzGfitGWroopBVbk"
+          "current_key": "AIzaSyCFTU0HMz76CRUugH6XgPn4pFkucQvzvEE"
         }
       ],
       "services": {

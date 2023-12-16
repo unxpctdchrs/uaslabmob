@@ -30,7 +30,6 @@ class SignInActivity : AppCompatActivity() {
             val pass = binding.etPwd.text.toString()
 
             if (email.isNotEmpty() && pass.isNotEmpty())
-
                 loginUser(email, pass)
             else
                 Toast.makeText(this, "Empty fields are not allowed", Toast.LENGTH_SHORT).show()
