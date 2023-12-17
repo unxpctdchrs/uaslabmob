@@ -8,47 +8,64 @@
     android:orientation="vertical"
     android:paddingTop="20dp"
     android:paddingLeft="20dp"
-    android:paddingRight="20dp">
+    android:paddingRight="20dp"
+    android:background="@drawable/transparent_bg_bordered_purple">
 
     <TextView
         android:id="@+id/tTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New Task"
-        android:textSize="30sp"/>
+        android:text="@string/newtask"
+        android:textSize="30sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:fontFamily="@font/montserrat_medium"/>
 
     <EditText
         android:id="@+id/etTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Title"
+        android:hint="@string/title"
+        android:textColorHint="@color/black"
         android:gravity="start|center"
         android:textSize="20sp"
         android:layout_marginTop="20dp"
         android:inputType="text"
-        android:background="@drawable/transparent_bg_bordered"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"/>
+        android:background="@drawable/transparent_bg_bordered_white"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/montserrat_medium"/>
     
     <EditText
         android:id="@+id/etDescription"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:hint="Description"
-        android:gravity="start|center"
+        android:layout_height="100dp"
+        android:hint="@string/description"
+        android:textColorHint="@color/black"
+        android:gravity="start"
         android:textSize="20sp"
         android:layout_marginTop="20dp"
         android:inputType="textMultiLine"
-        android:background="@drawable/transparent_bg_bordered"
+        android:scrollbars="vertical"
+        android:background="@drawable/transparent_bg_bordered_white"
         android:paddingLeft="10dp"
-        android:paddingRight="10dp"/>
+        android:paddingRight="10dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/montserrat_medium"/>
     
     <Button
         android:id="@+id/addBtn"
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:text="Add"
+        android:text="@string/add"
+        android:textSize="18sp"
         android:layout_gravity="center"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/black"
+        android:fontFamily="@font/montserrat_medium"/>
 
 </LinearLayout>

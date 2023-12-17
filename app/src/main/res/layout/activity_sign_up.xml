@@ -6,13 +6,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activity.SignUpActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/white">
 
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:background="@color/darkRed"
+        android:background="@color/purple"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -36,9 +37,11 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Email"
+            android:text="@string/email"
             tools:layout_editor_absoluteX="71dp"
-            tools:layout_editor_absoluteY="344dp" />
+            tools:layout_editor_absoluteY="344dp"
+            android:fontFamily="@font/montserrat_medium"
+            android:textColor="@color/black"/>
 
         <EditText
             android:id="@+id/etEmail"
@@ -46,15 +49,21 @@
             android:layout_height="wrap_content"
             tools:layout_editor_absoluteX="132dp"
             tools:layout_editor_absoluteY="395dp"
-            android:inputType="text"/>
+            android:inputType="textEmailAddress"
+            android:background="@drawable/transparent_bg_bordered"
+            android:padding="5dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/black"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="password"
+            android:text="@string/password"
             tools:layout_editor_absoluteX="71dp"
             tools:layout_editor_absoluteY="344dp"
-            android:layout_marginTop="50dp"/>
+            android:layout_marginTop="50dp"
+            android:fontFamily="@font/montserrat_medium"
+            android:textColor="@color/black"/>
 
         <EditText
             android:id="@+id/etPwd"
@@ -62,15 +71,21 @@
             android:layout_height="wrap_content"
             tools:layout_editor_absoluteX="132dp"
             tools:layout_editor_absoluteY="395dp"
-            android:inputType="textPassword"/>
+            android:inputType="textPassword"
+            android:background="@drawable/transparent_bg_bordered"
+            android:padding="5dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/black"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="verify your password"
+            android:text="@string/verify"
             tools:layout_editor_absoluteX="71dp"
             tools:layout_editor_absoluteY="344dp"
-            android:layout_marginTop="50dp"/>
+            android:layout_marginTop="50dp"
+            android:fontFamily="@font/montserrat_medium"
+            android:textColor="@color/black"/>
 
         <EditText
             android:id="@+id/etVerPwd"
@@ -78,15 +93,22 @@
             android:layout_height="wrap_content"
             tools:layout_editor_absoluteX="132dp"
             tools:layout_editor_absoluteY="395dp"
-            android:inputType="textPassword"/>
+            android:inputType="textPassword"
+            android:background="@drawable/transparent_bg_bordered"
+            android:padding="5dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/black"/>
 
         <Button
             android:id="@+id/signupBtn"
-            android:layout_width="wrap_content"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:text="sign up"
+            android:text="@string/signup"
             android:layout_gravity="center"
-            android:layout_marginTop="50dp"/>
+            android:layout_marginTop="50dp"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/blue"
+            android:fontFamily="@font/montserrat_medium"/>
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -98,16 +120,19 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="already have an account?"/>
+                android:text="@string/alreadyhaveanacc"
+                android:textColor="@color/black"
+                android:fontFamily="@font/montserrat_medium"/>
 
             <Button
                 android:id="@+id/signinactBtn"
-                android:layout_width="50dp"
+                android:layout_width="60dp"
                 android:layout_height="30dp"
-                android:text="sign in"
-                android:textColor="@color/green"
+                android:text="@string/signin"
+                android:textColor="@color/black"
                 android:background="@color/transparent"
-                android:padding="0dp"/>
+                android:padding="0dp"
+                android:fontFamily="@font/montserrat_medium"/>
 
         </LinearLayout>
 
@@ -121,7 +146,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:orientation="vertical"
-        android:background="@color/darkRed"/>
+        android:background="@color/purple"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

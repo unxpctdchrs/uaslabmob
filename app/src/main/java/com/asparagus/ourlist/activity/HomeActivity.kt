@@ -8,6 +8,7 @@ import com.asparagus.ourlist.adapter.TaskAdapter
 import com.asparagus.ourlist.databinding.ActivityHomeBinding
 import com.asparagus.ourlist.fragment.NewToDoListFragment
 import com.asparagus.ourlist.model.TaskViewModel
+import java.util.UUID
 
 class HomeActivity : AppCompatActivity() {
     private lateinit var binding: ActivityHomeBinding
@@ -37,7 +38,7 @@ class HomeActivity : AppCompatActivity() {
 
                     override fun onDeleteClick(position: Int) {
                         val currentTask = taskViewModel.taskItems.value?.get(position)
-                        taskViewModel.deleteTaskItem(currentTask!!.id)
+                        taskViewModel.deleteTaskItem(UUID.fromString(currentTask!!.id))
                     }
 
                     override fun onCompleted(position: Int) {
@@ -46,7 +47,7 @@ class HomeActivity : AppCompatActivity() {
                         if (currentTask != null && !currentTask.isCompleted) {
                             currentTask.isCompleted = true
                             // Update the task in the ViewModel or repository
-                            taskViewModel.updateTaskItem(currentTask.id, currentTask.title, currentTask.description, currentTask.isCompleted)
+                            taskViewModel.updateTaskItem(UUID.fromString(currentTask.id), currentTask.title, currentTask.description, currentTask.isCompleted)
 
                             // Notify the observer to update the UI
                             taskViewModel.taskItems.postValue(taskViewModel.taskItems.value)

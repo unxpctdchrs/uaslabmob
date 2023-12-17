@@ -21,7 +21,7 @@ class TaskViewModel: ViewModel() {
     fun updateTaskItem(id: UUID, title: String, desc: String, isCompleted: Boolean)
     {
         val list = taskItems.value
-        val task = list!!.find { it.id == id }!!
+        val task = list!!.find { UUID.fromString(it.id) == id }!!
         task.title = title
         task.description = desc
         task.isCompleted = isCompleted
@@ -30,7 +30,7 @@ class TaskViewModel: ViewModel() {
 
     fun deleteTaskItem(id: UUID){
         val list = taskItems.value
-        list?.removeIf{it.id == id}
+        list?.removeIf{UUID.fromString(it.id) == id}
         taskItems.postValue(list)
     }
 }
