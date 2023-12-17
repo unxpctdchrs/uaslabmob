@@ -20,13 +20,20 @@ class TaskViewModel: ViewModel() {
         taskItems.postValue(list)
     }
 
-    fun updateTaskItem(id: UUID, title: String, desc: String, dueTime: LocalTime?)
+    fun updateTaskItem(id: UUID, title: String, desc: String, dueTime: LocalTime?, isCompleted: Boolean)
     {
         val list = taskItems.value
         val task = list!!.find { it.id == id }!!
         task.title = title
         task.description = desc
         task.dueTime = dueTime
+        task.isCompleted = isCompleted
+        taskItems.postValue(list)
+    }
+
+    fun deleteTaskItem(id: UUID){
+        val list = taskItems.value
+        list?.removeIf{it.id == id}
         taskItems.postValue(list)
     }
 

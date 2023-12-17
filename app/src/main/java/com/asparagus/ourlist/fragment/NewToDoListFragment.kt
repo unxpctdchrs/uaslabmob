@@ -16,7 +16,6 @@ class NewToDoListFragment(var todoItem: ToDoItem?) : BottomSheetDialogFragment()
     private lateinit var taskViewModel: TaskViewModel
     private var dueTime: LocalTime? = null
 
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -42,7 +41,7 @@ class NewToDoListFragment(var todoItem: ToDoItem?) : BottomSheetDialogFragment()
             }
             else
             {
-                taskViewModel.updateTaskItem(todoItem!!.id, title, desc, dueTime)
+                taskViewModel.updateTaskItem(todoItem!!.id, title, desc, dueTime, isCompleted = false)
             }
             binding.etTitle.setText("")
             binding.etDescription.setText("")

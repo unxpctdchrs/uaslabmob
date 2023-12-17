@@ -21,20 +21,26 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Title"
-        style="@style/Widget.AppCompat.Button.Borderless"
         android:gravity="start|center"
         android:textSize="20sp"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="20dp"
+        android:inputType="text"
+        android:background="@drawable/transparent_bg_bordered"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"/>
     
     <EditText
         android:id="@+id/etDescription"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:hint="Description"
-        style="@style/Widget.AppCompat.Button.Borderless"
         android:gravity="start|center"
         android:textSize="20sp"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="20dp"
+        android:inputType="textMultiLine"
+        android:background="@drawable/transparent_bg_bordered"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"/>
     
     <Button
         android:id="@+id/addBtn"
