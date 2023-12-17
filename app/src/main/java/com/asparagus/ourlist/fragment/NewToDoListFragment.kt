@@ -1,6 +1,7 @@
 package com.asparagus.ourlist.fragment
 
 import android.os.Bundle
+import android.text.Editable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -31,17 +32,30 @@ class NewToDoListFragment(var todoItem: ToDoItem?) : BottomSheetDialogFragment()
 
         taskViewModel = ViewModelProvider(activity).get(TaskViewModel::class.java)
 
+        if (todoItem != null)
+        {
+            binding.tTitle.text = "Edit Task"
+            val editable = Editable.Factory.getInstance()
+            binding.etTitle.text = editable.newEditable(todoItem!!.title)
+            binding.etDescription.text = editable.newEditable(todoItem!!.description)
+            binding.addBtn.text = "Save"
+        }
+        else
+        {
+            binding.tTitle.text = "New Task"
+        }
+
         binding.addBtn.setOnClickListener{
             val title = binding.etTitle.text.toString()
             val desc = binding.etDescription.text.toString()
             if(todoItem == null)
             {
-                val newTask = ToDoItem(title, desc, dueTime,null)
+                val newTask = ToDoItem(title, desc,false)
                 taskViewModel.addTaskItem(newTask)
             }
             else
             {
-                taskViewModel.updateTaskItem(todoItem!!.id, title, desc, dueTime, isCompleted = false)
+                taskViewModel.updateTaskItem(todoItem!!.id, title, desc, false)
             }
             binding.etTitle.setText("")
             binding.etDescription.setText("")
